@@ -1,0 +1,87 @@
+
+h2 {
+	color: #ececec;
+	opacity:0.4;
+	position: relative;
+    
+}
+
+.jumbotron h2 {
+    font-family: 'Lobster', cursive;
+}
+
+
+.jumbotron {
+	background-color: white;
+	background-image: url(../img/bg4.png);
+    
+	
+}
+
+.jumbotron:hover {
+	background-color: white;
+	background-image: url(../img/bg2.png);
+	
+}
+
+
+
+.jumbotron h1 {	
+    color: black;  /* Fallback: assume this color ON TOP of image */
+    /*background: url(../img/bg4.png) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    opacity: 0.6;
+    font-family: 'Roboto Slab', serif;
+}
+
+.majid-title h1 {
+    color: black;  /* Fallback: assume this color ON TOP of image */
+    /*background: url(../img/ssbg.jpg) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    /opacity: 0.7;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.page-heading {
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+
+.img-circle {
+    height: 60%;
+    width: 60%; 
+}
+
+.col-md-6 {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+.well {
+    background-color: white;
+	opacity: 0.9;
+	color: #4f4f4f;
+}
+
+.col-md-3 p, h2 {
+	opacity: 0.8;
+	color: #4f4f4f;
+    
+}
+
+
+.tumblog h1 {
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    opacity: 0.9;
+}
