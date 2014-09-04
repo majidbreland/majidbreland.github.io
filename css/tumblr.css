@@ -1,0 +1,22 @@
+.tumblr_post {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+.tumblr_title {
+    
+}
+
+.tumblr_body img {
+    height: auto;
+    width: auto;
+    
+}
+
+.tumblr_caption {
+    font-family: Futura, sans-serif;
+    text-align: center;
+    
+}
