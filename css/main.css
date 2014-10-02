@@ -6,7 +6,8 @@ h2 {
     
 }
 hr {
-    border-width: medium;
+    border-width: thin;
+    border-color: #e0e0e0;
 }
 
 
@@ -53,7 +54,7 @@ hr {
 
 
 .page-heading {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 30px;
 }
 
