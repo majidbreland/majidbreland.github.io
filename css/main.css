@@ -10,6 +10,30 @@ hr {
     border-color: #e0e0e0;
 }
 
+.resume {
+    background: #000;
+}
+
+.resume h2{
+    color: white;
+}
+
+.design {
+    background: #444;
+}
+
+.design h2 {
+    color: white;
+}
+
+.blog {
+    background: #aaa;
+}
+
+.blog h2 {
+    color: white;
+}
+
 
 
 .jumbotron h2 {
