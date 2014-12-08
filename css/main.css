@@ -5,6 +5,7 @@ h2 {
 	position: relative;
     
 }
+
 hr {
     border-width: thin;
     border-color: #e0e0e0;
@@ -34,8 +35,6 @@ hr {
     color: white;
 }
 
-
-
 .jumbotron h2 {
     font-family: 'Lobster', cursive;
 }
@@ -45,12 +44,6 @@ hr {
 	background-color: white;
 	background-image: url(../img/bg4.png);
     
-	
-}
-
-.jumbotron:hover {
-	background-color: white;
-	background-image: url(../img/bg2.png);
 	
 }
 
