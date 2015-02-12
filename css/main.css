@@ -3,42 +3,19 @@ h2 {
 	color: #ececec;
 	opacity:0.4;
 	position: relative;
-    
 }
 
 hr {
     border-width: thin;
     border-color: #e0e0e0;
 }
-/*
-.resume {
-    background: #000;
+
+.info ul {
+    list-style-type: circle;
 }
 
-.resume h2{
-    color: white;
-}
-
-.design {
-    background: #444;
-}
-
-.design h2 {
-    color: white;
-}
-
-.blog {
-    background: #aaa;
-}
-
-.blog h2 {
-    color: white;
-}
-*/
-
-.jumbotron h2 {
-    font-family: 'Lobster', cursive;
-}
+/********************/
+/********************/
 
 
 .jumbotron {
@@ -46,16 +23,14 @@ hr {
 	background-image: url(../img/bg4.png);
 }
 
-
-
 .jumbotron h1 {	
     color: black;  /* Fallback: assume this color ON TOP of image */
     /*background: url(../img/bg4.png) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     */
+    font-family: 'Josefin Slab', serif;
     opacity: 0.6;
-    font-family: 'Roboto Slab', serif;
 }
 
 .majid-title h1 {
@@ -68,20 +43,25 @@ hr {
     font-family: 'Oswald', sans-serif;
 }
 
-
 .page-heading {
     padding-top: 30px;
 }
 
 .container-fluid {
-    padding-top: -10px;
-    padding-bottom: 20px;
-    
+    /*padding-top: -10px;
+    padding-bottom: 20px; */
+    font-family: 'Josefin Slab', serif;
 }
 
 .img-circle {
     height: 60%;
     width: 60%; 
+}
+
+.col-md-3 p, h2 {
+    opacity: 0.8;
+    color: #4f4f4f;
+    
 }
 
 .col-md-6 {
@@ -95,15 +75,22 @@ hr {
 	color: #4f4f4f;
 }
 
-.col-md-3 p, h2 {
-	opacity: 0.8;
-	color: #4f4f4f;
-    
+.tumblog h1 {
+    font-family: 'Pacifico', cursive;
+    color: #000;
 }
 
+.fade1 {
+    opacity: .9;
 
-.tumblog h1 {
-    font-family: 'Oswald', sans-serif;
-    color: #000;
-    opacity: 0.9;
+}
+
+.fade2 {
+    opacity: .7;
+
+}
+
+.fade3 {
+    opacity: .5;
+
 }
