@@ -162,6 +162,9 @@ hr.small {
     -o-background-size: cover;
 }
 
+.categ h2 {
+    color: white;
+}
 /* About */
 
 .about {
