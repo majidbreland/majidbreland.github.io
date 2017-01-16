@@ -1,10 +1,4 @@
-/*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
-/* Global Styles */
 
 html,
 body {
@@ -16,17 +10,13 @@ body {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+
 
 .text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
+    margin-top: 5%;
     font-size: 4.5em;
     font-weight: 700;
+    
 }
 
 /* Custom Button Styles */
@@ -215,27 +205,8 @@ hr.small {
     opacity: 0.8;
 }
 
-/* Call to Action */
 
-.call-to-action {
-    padding: 50px 0;
-}
 
-.call-to-action .btn {
-    margin: 10px;
-}
-
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
 
 /* Footer */
 
