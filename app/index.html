@@ -16,7 +16,6 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- fonts -->
-    
     <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
     <!-- endbuild -->
 </head>
@@ -30,13 +29,13 @@
     <div class="row container-padding">
         <div class="col-sm-4 nopadding">
             <a href="#!/"><img class="logo-c" src="images/halfpast.png"></a>
-
             <a ng-href="#video" class="link-padding col-xs-12">videography</a>
-
             <a ng-href="#photo" class="link-padding col-xs-12">photography</a>
-
+                <ul class="sub-menu">
+                    <li><a href="#">Submenu</a></li>
+                    <li><a href="#">Submenu</a></li>
+                </ul>
             <a ng-href="#!/web" class="link-padding col-xs-12">web design</a>
-
             <a ng-href="#!/graphics" class="link-padding col-xs-12">graphics</a>
         </div>
         <div class="col-sm-8 col-xs-12 nopadding" ng-view=""></div>
@@ -52,6 +51,13 @@
 
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
+
+    $('.sub-menu').hide();
+
+    $("li:has(ul)").click(function() {
+
+        $("ul", this).slideDown();
+    });
     </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -71,8 +77,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/photo.js"></script>
