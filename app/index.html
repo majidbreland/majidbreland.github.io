@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+    <script>$('.sub-menu').hide();
+
+    $("li:has(ul)").click(function() {
+
+        $("ul", this).slideDown();
+    });</script>
     <!-- endbuild -->
 </head>
 
@@ -35,7 +41,7 @@
                     <li><a href="#">Submenu</a></li>
                     <li><a href="#">Submenu</a></li>
                 </ul>
-            </li>
+                </li>
             <a ng-href="#!/web" class="link-padding col-xs-12">web design</a>
             <a ng-href="#!/graphics" class="link-padding col-xs-12">graphics</a>
         </div>
@@ -53,12 +59,7 @@
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
 
-    $('.sub-menu').hide();
 
-    $("li:has(ul)").click(function() {
-
-        $("ul", this).slideDown();
-    });
     </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
