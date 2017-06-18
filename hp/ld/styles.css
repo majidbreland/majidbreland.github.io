@@ -1,0 +1,41 @@
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+p {
+    font-family: 'Quattrocento', serif;
+    color: white;
+}
+
+.leftcol {
+	background-color: white;
+}
+
+.rightcol {
+	background-color: black;
+}
+
+.logo-c {
+	padding-top: 20px;
+	max-width: 250px;
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.container-padding {
+	padding-left: 20px;
+}
+
+}
+
+@media (min-width: 767px) {
+	.container-padding {
+	padding-left: 100px;
+}
+
+}
+
