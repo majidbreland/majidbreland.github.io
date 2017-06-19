@@ -9,7 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -30,16 +30,16 @@
     <div class="row container-padding">
         <div class="col-sm-4 nopadding">
             <a href="#!"><img class="logo-c" src="images/halfpast.png"></a>
-            <a ng-href="/#!video" class="link-padding col-xs-12">videography</a>
+            <a ng-href="/halfpast/#video" class="link-padding col-xs-12">videography</a>
             <a ng-click="showCategories = !showCategories " class="link-padding col-xs-12">photography</a>
             <div ng-show="showCategories">
                 <ul>
-                    <li><a ng-href="/#!people">people</a></li>
-                    <li><a ng-href="/#!places">places</a></li>
+                    <li><a ng-href="/halfpast/#people">people</a></li>
+                    <li><a ng-href="/halfpast/#places">places</a></li>
                 </ul>
             </div>
             <!--             <a ng-href="#!/web" class="link-padding col-xs-12">software development</a> -->
-            <a ng-href="#!/graphics" class="link-padding col-xs-12">graphic design</a>
+            <a ng-href="/halfpast/#graphics" class="link-padding col-xs-12">graphic design</a>
         </div>
         <div class="col-sm-8 col-xs-12 nopadding" ng-view=""></div>
     </div>
@@ -57,7 +57,7 @@
     </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -65,7 +65,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
