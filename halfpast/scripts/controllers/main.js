@@ -12,5 +12,6 @@ angular.module('halfpastApp')
 
         $scope.test1 = "test";
         $scope.showCategories = false;
+        $scope.showContact = false;
 
     }]);
