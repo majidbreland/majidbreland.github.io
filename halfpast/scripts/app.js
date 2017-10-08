@@ -49,6 +49,11 @@ angular
                 controller: 'GraphicsCtrl',
                 controllerAs: 'graphics'
             })
+            .when('/press', {
+                templateUrl: 'views/press.html',
+                controller: 'PressCtrl',
+                controllerAs: 'press'
+            })
             .otherwise({
                 redirectTo: '/'
             })
