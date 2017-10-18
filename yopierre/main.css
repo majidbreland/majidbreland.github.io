@@ -17,6 +17,29 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+a:link {
+  color: red;
+  font-family: 'Lato', sans-serif;
+}
+a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 p > a:hover{
     color: #d9d9d9;
     text-decoration:  underline;
