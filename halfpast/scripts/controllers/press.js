@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the halfpastApp
  */
-angular.module('halfpastApp')
+angular.module('halfpastAppPress')
   .controller('PressCtrl', function () {
 
   });

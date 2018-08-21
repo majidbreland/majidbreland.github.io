@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the halfpastApp
  */
-angular.module('halfpastApp')
+angular.module('halfpastAppVideo')
   .controller('VideoCtrl', function () {
     this.imagelist = [
       '/images/1.jpg',

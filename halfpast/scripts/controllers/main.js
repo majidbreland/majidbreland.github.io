@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the halfpastApp
  */
-angular.module('halfpastApp')
+angular.module('halfpastAppMain')
     .controller('MainCtrl', ['$scope', function($scope) {
 
         $scope.test1 = "test";
