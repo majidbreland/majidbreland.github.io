@@ -193,10 +193,10 @@ gra.Game.prototype = {
     }
 
            //  only move when you click
-    if (this.input.mousePointer.isDown)
+    if (this.input.pointer1.isDown)
     {
-        console.log(this.input.mousePointer.x, this.world.width/2);
-        if (this.input.mousePointer.x > this.world.width/2) {
+        console.log(this.input.pointer1.x, this.world.width/2);
+        if (this.input.pointer1.x > this.world.width/2) {
             sprite.scale.x = .3;
             console.log(sprite.scale.x);
             player.animations.play('flying', 8 , true);
