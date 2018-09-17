@@ -55,7 +55,7 @@ gra.Game.prototype = {
 
 
         //magneses group
-        magneses = this.add.group()
+        // magneses = this.add.group()
 
         //coins spawning
         coins = this.add.group();
@@ -102,7 +102,7 @@ gra.Game.prototype = {
 
         this.physics.arcade.collide(enemy, player, this.collisionHandler, null, this);
         this.physics.arcade.collide(player, coins, this.coinCollisionHandler);
-        this.physics.arcade.collide(player, magneses, this.magnesCollisionHandler);
+        // this.physics.arcade.collide(player, magneses, this.magnesCollisionHandler);
         // bg.tilePosition.y += 2;
         // bg.tilePosition.x += 1;
         bg.tilePosition.x -= 2;
@@ -284,21 +284,21 @@ gra.Game.prototype = {
 
         this.gameOverScreen();
     },
-    magnesCollisionHandler: function(player, magneses) {
-        redEmitter.x = magneses.x
-        redEmitter.y = magneses.y
+    // magnesCollisionHandler: function(player, magneses) {
+    //     redEmitter.x = magneses.x
+    //     redEmitter.y = magneses.y
 
-        blueEmitter.x = magneses.x
-        blueEmitter.y = magneses.y
+    //     blueEmitter.x = magneses.x
+    //     blueEmitter.y = magneses.y
 
-        magneses.destroy();
-        // this.camera.shake(0.025, 100);
+    //     magneses.destroy();
+    //     // this.camera.shake(0.025, 100);
 
-        // this.camera.shake(0.01, 50);
-        redEmitter.start(true, 1000, null, 50)
-        blueEmitter.start(true, 1000, null, 50)
+    //     // this.camera.shake(0.01, 50);
+    //     redEmitter.start(true, 1000, null, 50)
+    //     blueEmitter.start(true, 1000, null, 50)
 
-    },
+    // },
     // listener: function(){//ta funkcja "slucha" czy nie zostal klkniety guzik od wyciszania i wlaczania dzwiekow
     //   if(soundBuffor === 1){//muzyka wlaczona
     //        sound.loadTexture('soundOff');
@@ -368,38 +368,35 @@ gra.Game.prototype = {
             coins.add(coin);
         }
    },
-    spawnMagnes: function(){
-        // let magnes;
-        if(menuTurnedOn === false){
-            let random = this.rnd.integerInRange(0, 1);
-            if(random === 0)
-                magnes = this.add.sprite(160, -100 ,'magnes', 0);
-            else
-                magnes = this.add.sprite(480, -100 ,'magnes', 0);
+    // spawnMagnes: function(){
+    //     // let magnes;
+    //     if(menuTurnedOn === false){
+    //         let random = this.rnd.integerInRange(0, 1);
+    //         if(random === 0)
+    //             magnes = this.add.sprite(160, -100 ,'magnes', 0);
+    //         else
+    //             magnes = this.add.sprite(480, -100 ,'magnes', 0);
 
-            //doesnt matter which magnes was created(left or right), we need to add some settings to it
-            if(magnes){
-                this.physics.arcade.enable(magnes);
-                magnes.enableBody = true;
-                magnes.scale.setTo(0.1);
-                magnes.anchor.setTo(0.5, 1);
-                magnes.body.gravity.y = universeSpeed;
+    //         //doesnt matter which magnes was created(left or right), we need to add some settings to it
+    //         if(magnes){
+    //             this.physics.arcade.enable(magnes);
+    //             magnes.enableBody = true;
+    //             magnes.scale.setTo(0.1);
+    //             magnes.anchor.setTo(0.5, 1);
+    //             magnes.body.gravity.y = universeSpeed;
 
-                magneses.add(magnes);
-            }
-        }
+    //             magneses.add(magnes);
+    //         }
+    //     }
 
-    },
+    // },
     startSpawning: function() {
         let random = this.rnd.integerInRange(1, 100)
 
         let magnesChance = 1;
         //spawning every object which is falling from up to bottom, e.g. coins, magnes etc.
 
-        if (random === magnesChance)
-            this.spawnMagnes(this)
-        else//otherwise spown most probably item, which is a coin
-            this.spawnCoin(this)
+        this.spawnCoin(this)
     },
     destroyCoins: function(){//destroyin' coins which get to the bottom border of the screen, to prevent stack overflow
         coins.forEach(function(object) {
@@ -408,13 +405,13 @@ gra.Game.prototype = {
             }
         }, this);
     },
-    destroyMagneses: function() {
-        magneses.forEach(function(object) {
-            if(object.y >= this.world.height) {coins.add(coin);
-                object.destroy();
-            }
-        }, this);
-    },
+    // destroyMagneses: function() {
+    //     magneses.forEach(function(object) {
+    //         if(object.y >= this.world.height) {coins.add(coin);
+    //             object.destroy();
+    //         }
+    //     }, this);
+    // },
     coinCollisionHandler: function(player, coins){//wykrywa kolizje gracza z coinami
         //dzwiek podnoszenia coina
         coinPicking.play('', 0, 1, false);

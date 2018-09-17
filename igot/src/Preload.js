@@ -6,7 +6,7 @@ gra.Preload.prototype = {
         this.load.image('enemy', 'img/stone.png');
         this.load.image('bg', 'img/bg.png');
         this.load.image('bg2', 'img/bg.png');
-        this.load.image('splash1', 'img/splash1.png');
+        this.load.image('splash1', 'img/splash2.png');
         this.load.image('soundOn','img/soundOn.png');
         this.load.image('soundOff','img/soundOff.png');
         this.load.image('tapToStart','img/tapToStartTheGame.png');

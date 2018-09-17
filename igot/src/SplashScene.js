@@ -1,7 +1,7 @@
 gra.SplashScene = function(game) {};
 gra.SplashScene.prototype = {
     create: function() {
-
+        this.stage.backgroundColor = "#f94d9e";
         splashImage1 = this.add.sprite(this.world.width/2, this.world.height/2, 'splash1');
         splashImage1.anchor.setTo(0.5);
         splashImage1.scale.setTo(0.7);
