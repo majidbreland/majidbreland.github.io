@@ -192,29 +192,52 @@ gra.Game.prototype = {
         sprite.x += 10;
     }
 
+           //  only move when you click
+    if (this.input.mousePointer.isDown)
+    {
+        console.log(this.input.mousePointer.x, this.world.width/2);
+        if (this.input.mousePointer.x > this.world.width/2) {
+            sprite.scale.x = .3;
+            console.log(sprite.scale.x);
+            player.animations.play('flying', 8 , true);
+            sprite.x += 10;
+        } else {
+            sprite.scale.x = -.3;
+            console.log(sprite.scale.x);
+            player.animations.play('flying', 8 , true);
+            sprite.x -= 10;
+
+        }
+    }
+    else
+    {
+        sprite.body.velocity.setTo(0, 0);
+    }
+
+
 
         //obsluga urzadzen mobilnych
-        if(wasScreenTapped == false && this.game.input.pointer1.isDown){
-            downX = this.game.input.x;
-            wasScreenTapped = true;//zapobiega ponownemu wywolaniu kodu w tym warunku, jesli jeszcze nie "puscilismy" ekranu
-            wasScreenTapped2 = true;//pozwala wlaczyc kod w warunku onUp(nizej)
-        }
-        if(wasScreenTapped2 === true && this.game.input.pointer1.isUp){
-            upX = this.game.input.x;
-            //tutaj przemieszczenie(zamienic na ease function)
-            if(downX - upX < 0){//wtedy minus->czyli idziemy w prawo
-                if(sprite.x === 160){
-                    movingShipRight = this.add.tween(sprite).to( { x: 480 }, zwrotnosc, Phaser.Easing.Linear.None, true);
-                }
-            }else if(downX - upX > 0){//wtedy idziemy w lewo
-                if(sprite.x === 480){
-                    movingShipLeft = this.add.tween(sprite).to( { x: 160 }, zwrotnosc,  Phaser.Easing.Linear.None, true);
-                }
-            }
+        // if(wasScreenTapped == false && this.game.input.pointer1.isDown){
+        //     downX = this.game.input.x;
+        //     wasScreenTapped = true;//zapobiega ponownemu wywolaniu kodu w tym warunku, jesli jeszcze nie "puscilismy" ekranu
+        //     wasScreenTapped2 = true;//pozwala wlaczyc kod w warunku onUp(nizej)
+        // }
+        // if(wasScreenTapped2 === true && this.game.input.pointer1.isUp){
+        //     upX = this.game.input.x;
+        //     //tutaj przemieszczenie(zamienic na ease function)
+        //     if(downX - upX < 0){//wtedy minus->czyli idziemy w prawo
+        //         if(sprite.x === 160){
+        //             movingShipRight = this.add.tween(sprite).to( { x: 480 }, zwrotnosc, Phaser.Easing.Linear.None, true);
+        //         }
+        //     }else if(downX - upX > 0){//wtedy idziemy w lewo
+        //         if(sprite.x === 480){
+        //             movingShipLeft = this.add.tween(sprite).to( { x: 160 }, zwrotnosc,  Phaser.Easing.Linear.None, true);
+        //         }
+        //     }
 
-            wasScreenTapped = false;
-            wasScreenTapped2 = false;
-        }
+        //     wasScreenTapped = false;
+        //     wasScreenTapped2 = false;
+        // }
     },
     // poruszanieTla: function(sprite){
     //     bg.y += universeSpeed;
