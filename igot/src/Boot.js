@@ -11,7 +11,7 @@ var bg2;
 var player;
 var enemy;
 var whiteSplash;
-var universeSpeed = 3;
+var universeSpeed = 5;
 var enemySpeed = 1;
 var score  = 0;
 var cash = 0;
@@ -23,27 +23,26 @@ var g = 300;
 var kaboom;
 var distanceParsecOld = 0;
 var distanceParsecNew = 0;
-//input memory, onDown and onUp
+
 var downX;
 var upX;
-var wasScreenTapped = false;
-var wasScreenTapped2 = false;//bufor dla tapniecia
+
 //sound
 var sound;//soundOn, soundOff sprite
-var soundBuffor = 0; //1 gdy dzwiek wlaczony,0 gdy dzwiek wylaczony
+var soundBuffor = 0;
 var music;
 var coinPicking;
 //splashScene
 var splashImage1;
 var tween;
-//menu stuff,isGameOverScreenOn, czy wlaczone itp.
+
 var menuTurnedOn = true;
-var checkIfEnemyCreated = false;//sprawdzamy czy wrog jest stworzony, funkcja wykonuje sie w update, w menu obiekt jest zabijany
-var checkIfScreenWasTouchedInMenu = false;//zmiana na true powoduje wlaczenie gry wlasciwej
+var checkIfEnemyCreated = false;
+var checkIfScreenWasTouchedInMenu = false;
 var isGameOverScreenOn = false;
-var distanceLabelGameOverScreen;//text label wyswietlajacy pkt na gameOverScreen
-//rocket stuff
-var zwrotnosc = 600;//player speed
+var distanceLabelGameOverScreen;
+
+var zwrotnosc = 600;
 gra.Boot = function(game) {};
 gra.Boot.prototype = {
 

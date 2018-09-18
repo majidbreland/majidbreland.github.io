@@ -12,7 +12,7 @@ gra.Preload.prototype = {
         this.load.image('tapToStart','img/tapToStartTheGame.png');
         this.load.image('smallCoin','img/star.png');
         this.load.image('whiteSplash','img/whiteSplash.png');
-        this.load.image('goldParticle', 'img/goldParticle.png');
+        this.load.image('heartEyeEmoji', 'img/goldParticle.png');
         this.load.image('whiteParticle','img/whiteParticle.png');
         this.load.image('redParticle','img/redParticle.png');
         this.load.image('blueParticle','img/blueParticle.png');
