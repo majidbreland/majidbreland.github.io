@@ -1,8 +1,6 @@
-//laduje pliki multimedialne do pamieci
 gra.Preload = function(game) {};
 gra.Preload.prototype = {
     preload: function() {
-        //sprite statyczne(nie animowane)
         this.load.image('enemy', 'img/stone.png');
         this.load.image('bg', 'img/bg.png');
         this.load.image('bg2', 'img/bg.png');
@@ -24,7 +22,6 @@ gra.Preload.prototype = {
         this.load.image('coin','img/star.png');
         this.load.image('coin2','img/girl2.png');
         this.load.image('coin3','img/girl3.png');
-        // this.load.image('coin','img/coinAnimation.png', 400 , 400 , 4);
         this.load.spritesheet('player','img/danwalking.png', 225, 420 , 3);
 
         //music

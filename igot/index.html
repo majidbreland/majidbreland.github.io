@@ -2,6 +2,18 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101330792-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-101330792-2');
+    </script>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
     <meta charset="utf-8">
     <title>I Got The Hoes</title>
     <!-- <link rel="shortcut icon" href="icon16.png" type="image/x-icon" /> -->
@@ -9,42 +21,169 @@
         body {
             overflow: hidden;
             margin: 0;
+            font-family: 'Press Start 2P', cursive;
             background: #f94d9e !important;
+        }
+        .game-footer {
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+        .instructions {
+            display:none;
+        }
+        .song-title {
+            padding-top: 20px;
+        }
+        @media only screen
+        and (min-device-width : 1024px) {
+
+            .game-footer-desktop {
+                position: absolute;
+                right: 15px;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 12px;
+                padding-top: 30vh;
+            }
+            .instructions {
+                position: fixed;
+                left:10px;
+                font-family: 'Press Start 2P', cursive;
+                text-align: center;
+                display: inline;
+                font-size: 10px;
+                padding-top: 30vh;
+            }
+
+
+        }
+        @media only screen
+        and (min-device-width : 667px)
+        and (max-device-width : 1024px)
+        and (orientation : portrait) {
+            .song-title {
+                padding-top: 20vh;
+            }
+            .instructions {
+                position: fixed;
+                top:0;
+                left: 1vh;
+                padding-top: 5vh;
+                display:inline;
+                text-align: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 24px;
+            }
+            .game-footer {
+                display: inline;
+                font-family: 'Press Start 2P', cursive;
+                text-align: center;
+            }
+            .social {
+                padding-top: 8vh;
+            }
+            footer {
+                background-color: transparent;
+                font-family: 'Press Start 2P', cursive;
+                position: absolute;
+                left: 0;
+                font-size: 24px;
+                bottom: 0;
+                height: 300px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .game-footer-desktop {
+                display: none;
+            }
+
+        }
+        @media only screen
+        and (max-device-width : 667px)
+        and (orientation : portrait) {
+            .game-footer-desktop {
+                display: none;
+            }
+            .game-footer {
+            display: inline;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            }
+            .song-title {
+                padding-top: 20vh;
+            }
+            footer {
+                background-color: transparent;
+                font-family: 'Press Start 2P', cursive;
+                position: absolute;
+                left: 0;
+                font-size: 24px;
+                bottom: 0;
+                height: 300px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .instructions {
+                position: fixed;
+                left: 1vh;
+                top:0;
+                padding-top: 5vh;
+                display:inline;
+                text-align: center;
+                font-family: 'Press Start 2P', cursive;
+                font-size: 24px;
+            }
+            .social {
+                padding-top: 5vh;
+            }
         }
     </style>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <script src="src/Boot.js"></script>
-    <script src="src/Preload.js"></script>
-    <script src="src/SplashScene.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <script src="src/phaser.js"></script>
-    <script src="src/Game.js"></script>
+
 
 </head>
 
 <body>
 <div class="container">
+    <div class="instructions">
+        <div class="col-lg-4 col-xs-12">
+            <p>- Tap each side of your screen to move</p>
+            <br>
+            <p>- Dodge the DMs, Collect the hoes</p>
+        </div>
+    </div>
     <div class="row" style>
         <div class="col-lg-12" style="text-align: center">
-            <img style="padding-top: 20px" src="img/splash1.png" class="img-fluid">
+            <img src="img/splash1.png" class="img-fluid song-title">
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-        <script>
-            (function() {
-                var game = new Phaser.Game(640, 480, Phaser.CANVAS, 'game');
-                game.state.add('Boot', gra.Boot);
-                game.state.add('Preload', gra.Preload);
-                game.state.add('SplashScene', gra.SplashScene);
-                game.state.add('Game',gra.Game);
-                game.state.start('Boot');
-            })();
-        </script>
+            <script>
+                var _0xa687=["\x42\x6F\x6F\x74","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x73\x63\x61\x6C\x65\x4D\x6F\x64\x65","\x73\x63\x61\x6C\x65","\x67\x61\x6D\x65","\x53\x48\x4F\x57\x5F\x41\x4C\x4C","\x53\x63\x61\x6C\x65\x4D\x61\x6E\x61\x67\x65\x72","\x70\x61\x67\x65\x41\x6C\x69\x67\x6E\x48\x6F\x72\x69\x7A\x6F\x6E\x74\x61\x6C\x6C\x79","\x70\x61\x67\x65\x41\x6C\x69\x67\x6E\x56\x65\x72\x74\x69\x63\x61\x6C\x6C\x79","\x50\x72\x65\x6C\x6F\x61\x64","\x73\x74\x61\x72\x74","\x73\x74\x61\x74\x65","\x47\x61\x6D\x65","\x50\x68\x79\x73\x69\x63\x73","\x73\x74\x61\x72\x74\x53\x79\x73\x74\x65\x6D","\x70\x68\x79\x73\x69\x63\x73","\x79","\x67\x72\x61\x76\x69\x74\x79","\x61\x72\x63\x61\x64\x65","\x62\x67","\x74\x69\x6C\x65\x53\x70\x72\x69\x74\x65","\x61\x64\x64","\x73\x6D\x61\x6C\x6C\x43\x6F\x69\x6E","\x73\x70\x72\x69\x74\x65","\x73\x65\x74\x54\x6F","\x61\x6E\x63\x68\x6F\x72","\x63\x72\x65\x61\x74\x65\x4E\x65\x77\x50\x6C\x61\x79\x65\x72","\x77\x69\x64\x74\x68","\x77\x6F\x72\x6C\x64","\x68\x65\x69\x67\x68\x74","\x74\x61\x70\x54\x6F\x53\x74\x61\x72\x74","\x74\x65\x78\x74","\x44\x69\x73\x74\x61\x6E\x63\x65\x20\x69\x6E\x20\x66\x74\x3A\x20\x30","\x66\x6F\x6E\x74","\x50\x72\x65\x73\x73\x20\x53\x74\x61\x72\x74\x20\x32\x50","\x66\x6F\x6E\x74\x53\x69\x7A\x65","\x66\x69\x6C\x6C","\x23\x46\x46\x46\x46\x46\x46","\x63\x6F\x69\x6E\x53\x6F\x75\x6E\x64","\x61\x75\x64\x69\x6F","\x73\x74\x6F\x70","\x67\x72\x6F\x75\x70","\x73\x74\x61\x72\x74\x53\x70\x61\x77\x6E\x69\x6E\x67","\x6C\x6F\x6F\x70","\x65\x76\x65\x6E\x74\x73","\x74\x69\x6D\x65","\x65\x6D\x69\x74\x74\x65\x72","\x68\x65\x61\x72\x74\x45\x79\x65\x45\x6D\x6F\x6A\x69","\x6D\x61\x6B\x65\x50\x61\x72\x74\x69\x63\x6C\x65\x73","\x6D\x69\x6E\x50\x61\x72\x74\x69\x63\x6C\x65\x53\x63\x61\x6C\x65","\x6D\x61\x78\x50\x61\x72\x74\x69\x63\x6C\x65\x53\x63\x61\x6C\x65","\x62\x6F\x75\x6E\x63\x65","\x77\x68\x69\x74\x65\x50\x61\x72\x74\x69\x63\x6C\x65","\x72\x65\x64\x50\x61\x72\x74\x69\x63\x6C\x65","\x62\x6C\x61\x63\x6B\x50\x61\x72\x74\x69\x63\x6C\x65","\x62\x6C\x75\x65\x50\x61\x72\x74\x69\x63\x6C\x65","\x47\x61\x6D\x65\x4F\x76\x65\x72","\x23\x30\x30\x30\x30\x30\x30","\x61\x6C\x70\x68\x61","\x63\x6F\x6C\x6C\x69\x73\x69\x6F\x6E\x48\x61\x6E\x64\x6C\x65\x72","\x63\x6F\x6C\x6C\x69\x64\x65","\x63\x6F\x69\x6E\x43\x6F\x6C\x6C\x69\x73\x69\x6F\x6E\x48\x61\x6E\x64\x6C\x65\x72","\x78","\x74\x69\x6C\x65\x50\x6F\x73\x69\x74\x69\x6F\x6E","\x69\x73\x44\x6F\x77\x6E","\x70\x6F\x69\x6E\x74\x65\x72\x31","\x69\x6E\x70\x75\x74","\x6C\x65\x66\x74\x42\x75\x74\x74\x6F\x6E","\x61\x63\x74\x69\x76\x65\x50\x6F\x69\x6E\x74\x65\x72","\x76\x69\x73\x69\x62\x6C\x65","\x70\x6C\x61\x79\x65\x72\x4D\x6F\x76\x65","\x64\x69\x73\x74\x61\x6E\x63\x65\x54\x72\x61\x76\x65\x6C\x65\x64","\x63\x72\x65\x61\x74\x65\x45\x6E\x65\x6D\x79","\x65\x6E\x65\x6D\x69\x65\x73\x4D\x6F\x76\x65","\x64\x65\x73\x74\x72\x6F\x79\x43\x6F\x69\x6E\x73","\x63\x6F\x69\x6E\x4C\x61\x62\x65\x6C\x54\x65\x78\x74\x46\x75\x6E","\x65\x6E\x65\x6D\x79\x50\x6F\x73\x69\x74\x69\x6F\x6E\x73","\x76\x65\x6C\x6F\x63\x69\x74\x79","\x62\x6F\x64\x79","\x69\x6E\x74\x65\x67\x65\x72\x49\x6E\x52\x61\x6E\x67\x65","\x72\x6E\x64","\x4B\x65\x79\x62\x6F\x61\x72\x64","\x6B\x65\x79\x62\x6F\x61\x72\x64","\x66\x6C\x79\x69\x6E\x67","\x70\x6C\x61\x79","\x61\x6E\x69\x6D\x61\x74\x69\x6F\x6E\x73","\x74\x77\x65\x65\x6E","\x4C\x69\x6E\x65\x61\x72","\x45\x61\x73\x69\x6E\x67","\x74\x6F","\x44\x69\x73\x74\x61\x6E\x63\x65\x20\x69\x6E\x20\x66\x74\x3A\x20","\x66\x6C\x6F\x6F\x72","\x73\x65\x74\x54\x65\x78\x74","\x6F\x6E\x55\x70\x64\x61\x74\x65\x43\x61\x6C\x6C\x62\x61\x63\x6B","\x73\x68\x61\x6B\x65","\x63\x61\x6D\x65\x72\x61","\x64\x65\x73\x74\x72\x6F\x79","\x64\x65\x73\x74\x72\x6F\x79\x45\x6E\x65\x6D\x79","\x67\x61\x6D\x65\x4F\x76\x65\x72\x53\x63\x72\x65\x65\x6E","\x65\x6E\x65\x6D\x79","\x65\x6E\x61\x62\x6C\x65","\x65\x6E\x61\x62\x6C\x65\x42\x6F\x64\x79","\x69\x6D\x6D\x6F\x76\x61\x62\x6C\x65","\x63\x6F\x69\x6E","\x63\x6F\x69\x6E\x32","\x63\x6F\x69\x6E\x33","\x72\x6F\x74\x61\x74\x69\x6E\x67","\x73\x70\x61\x77\x6E\x43\x6F\x69\x6E","\x66\x6F\x72\x45\x61\x63\x68","","\x77\x68\x69\x74\x65\x53\x70\x6C\x61\x73\x68","\x68\x69\x67\x68\x53\x63\x6F\x72\x65\x46\x75\x6E\x63","\x61\x64\x64\x4F\x6E\x63\x65","\x6F\x6E\x43\x6F\x6D\x70\x6C\x65\x74\x65","\x68\x69\x67\x68\x73\x63\x6F\x72\x65","\x67\x65\x74\x49\x74\x65\x6D","\x73\x65\x74\x49\x74\x65\x6D","\x6D\x6F\x6E\x65\x79","\x59\x6F\x75\x20\x72\x61\x6E\x3A\x20","\x20\x66\x74","\x59\x6F\x75\x20\x67\x6F\x74\x20","\x63\x6F\x69\x6E\x5F\x61\x6D\x6F\x75\x6E\x74","\x72\x6F\x75\x6E\x64","\x20\x68\x6F\x65\x73","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x77\x61\x74\x63\x68\x3F\x76\x3D\x4C\x4B\x75\x2D\x69\x59\x36\x78\x45\x69\x6B","\x72\x65\x70\x6C\x61\x63\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x44\x6F\x20\x79\x6F\x75\x20\x77\x61\x6E\x74\x20\x74\x6F\x20\x70\x6C\x61\x79\x20\x61\x67\x61\x69\x6E\x3F","\x72\x65\x73\x65\x74\x46\x75\x6E","\x70\x6C\x61\x79\x65\x72","\x63\x6F\x6C\x6C\x69\x64\x65\x57\x6F\x72\x6C\x64\x42\x6F\x75\x6E\x64\x73","\x69\x6D\x67\x2F\x73\x74\x6F\x6E\x65\x2E\x70\x6E\x67","\x69\x6D\x61\x67\x65","\x6C\x6F\x61\x64","\x69\x6D\x67\x2F\x62\x67\x2E\x70\x6E\x67","\x62\x67\x32","\x73\x70\x6C\x61\x73\x68\x31","\x69\x6D\x67\x2F\x73\x70\x6C\x61\x73\x68\x32\x2E\x70\x6E\x67","\x73\x6F\x75\x6E\x64\x4F\x6E","\x69\x6D\x67\x2F\x73\x6F\x75\x6E\x64\x4F\x6E\x2E\x70\x6E\x67","\x73\x6F\x75\x6E\x64\x4F\x66\x66","\x69\x6D\x67\x2F\x73\x6F\x75\x6E\x64\x4F\x66\x66\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x74\x61\x70\x54\x6F\x53\x74\x61\x72\x74\x54\x68\x65\x47\x61\x6D\x65\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x73\x74\x61\x72\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x77\x68\x69\x74\x65\x53\x70\x6C\x61\x73\x68\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x67\x6F\x6C\x64\x50\x61\x72\x74\x69\x63\x6C\x65\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x77\x68\x69\x74\x65\x50\x61\x72\x74\x69\x63\x6C\x65\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x72\x65\x64\x50\x61\x72\x74\x69\x63\x6C\x65\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x62\x6C\x75\x65\x50\x61\x72\x74\x69\x63\x6C\x65\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x62\x6C\x61\x63\x6B\x50\x61\x72\x74\x69\x63\x6C\x65\x2E\x70\x6E\x67","\x67\x69\x72\x6C\x31","\x6D\x61\x67\x6E\x65\x73","\x69\x6D\x67\x2F\x6D\x61\x67\x6E\x65\x73\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x67\x69\x72\x6C\x32\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x67\x69\x72\x6C\x33\x2E\x70\x6E\x67","\x69\x6D\x67\x2F\x64\x61\x6E\x77\x61\x6C\x6B\x69\x6E\x67\x2E\x70\x6E\x67","\x73\x70\x72\x69\x74\x65\x73\x68\x65\x65\x74","\x6D\x75\x73\x69\x63\x55\x6E\x69\x76\x65\x72\x73\x65","\x61\x73\x73\x65\x74\x73\x2F\x73\x6F\x75\x6E\x64\x2E\x6D\x70\x33","\x61\x73\x73\x65\x74\x73\x2F\x63\x6F\x69\x6E\x53\x6F\x75\x6E\x64\x2E\x6D\x70\x33","\x53\x70\x6C\x61\x73\x68\x53\x63\x65\x6E\x65","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x43\x6F\x6C\x6F\x72","\x73\x74\x61\x67\x65","\x23\x66\x39\x34\x64\x39\x65","\x53\x45\x43\x4F\x4E\x44","\x54\x69\x6D\x65\x72","\x73\x74\x6F\x70\x53\x74\x61\x72\x74","\x73\x74\x61\x72\x74\x47\x61\x6D\x65"];(function(){var _0x7566x1={_WIDTH:640,_HEIGHT:480},_0x7566x2=1,_0x7566x3=5,_0x7566x4,_0x7566x5,_0x7566x6,_0x7566x7,_0x7566x8,_0x7566x9=5,_0x7566xa=1,_0x7566xb=0,_0x7566xc=0,_0x7566xd,_0x7566xe,_0x7566xf,_0x7566x10=300,_0x7566x11,_0x7566x12=0,_0x7566x13=0,_0x7566x14,_0x7566x15,_0x7566x16,_0x7566x17=0,_0x7566x18,_0x7566x19,_0x7566x1a,_0x7566x1b,_0x7566x1c=!0,_0x7566x1d=!1,_0x7566x1e=!1,_0x7566x1f=!1,_0x7566x20,_0x7566x21=600;_0x7566x1[_0xa687[0]]= function(){},_0x7566x1[_0xa687[0]][_0xa687[1]]= {create:function(){this[_0xa687[4]][_0xa687[3]][_0xa687[2]]= Phaser[_0xa687[6]][_0xa687[5]],this[_0xa687[4]][_0xa687[3]][_0xa687[7]]=  !0,this[_0xa687[4]][_0xa687[3]][_0xa687[8]]=  !0,this[_0xa687[4]][_0xa687[11]][_0xa687[10]](_0xa687[9])}};_0x7566x1[_0xa687[12]]= function(){},_0x7566x1[_0xa687[12]][_0xa687[1]]= {create:function(){this[_0xa687[15]][_0xa687[14]](Phaser[_0xa687[13]].ARCADE),this[_0xa687[15]][_0xa687[18]][_0xa687[17]][_0xa687[16]]= _0x7566x10,_0x7566x4= this[_0xa687[21]][_0xa687[20]](0,0,640,480,_0xa687[19]),smallCoinIcon= this[_0xa687[21]][_0xa687[23]](60,76,_0xa687[22]),smallCoinIcon[_0xa687[25]][_0xa687[24]](0.5),smallCoinIcon[_0xa687[3]][_0xa687[24]](0.08),this[_0xa687[26]](),_0x7566xe= this[_0xa687[21]][_0xa687[23]](this[_0xa687[28]][_0xa687[27]]/ 2,7* (this[_0xa687[28]][_0xa687[29]]/ 10),_0xa687[30]),_0x7566xe[_0xa687[25]][_0xa687[24]](0.5),_0x7566xd= this[_0xa687[21]][_0xa687[31]](440,80),_0x7566xd[_0xa687[31]]= _0xa687[32],_0x7566xd[_0xa687[25]][_0xa687[24]](0.5),_0x7566xd[_0xa687[33]]= _0xa687[34],_0x7566xd[_0xa687[35]]= 20,_0x7566xd[_0xa687[36]]= _0xa687[37],coinAmountLabel= this[_0xa687[21]][_0xa687[31]](120,80),coinAmountLabel[_0xa687[31]]= _0x7566xc,coinAmountLabel[_0xa687[25]][_0xa687[24]](0.5),coinAmountLabel[_0xa687[33]]= _0xa687[34],coinAmountLabel[_0xa687[35]]= 20,coinAmountLabel[_0xa687[36]]= _0xa687[37],_0x7566x19= this[_0xa687[21]][_0xa687[39]](_0xa687[38]),_0x7566x19[_0xa687[40]](),coins= this[_0xa687[21]][_0xa687[41]](),this[_0xa687[45]][_0xa687[44]][_0xa687[43]](300,this[_0xa687[42]],this),emitter= this[_0xa687[21]][_0xa687[46]](0,0,10),emitter[_0xa687[48]](_0xa687[47]),emitter[_0xa687[17]]= 2e3,emitter[_0xa687[49]]= 1,emitter[_0xa687[50]]= 4,emitter[_0xa687[51]][_0xa687[24]](0.5,0.5),whiteEmitter= this[_0xa687[21]][_0xa687[46]](100,0,100),whiteEmitter[_0xa687[48]](_0xa687[52]),whiteEmitter[_0xa687[49]]= 1,whiteEmitter[_0xa687[50]]= 4,whiteEmitter[_0xa687[17]]= 100,redEmitter= this[_0xa687[21]][_0xa687[46]](0,0,100),redEmitter[_0xa687[48]](_0xa687[53]),redEmitter[_0xa687[17]]= 1e3,redEmitter[_0xa687[49]]= 1,redEmitter[_0xa687[50]]= 4,blackEmitter= this[_0xa687[21]][_0xa687[46]](0,0,100),blackEmitter[_0xa687[48]](_0xa687[54]),blackEmitter[_0xa687[17]]= 300,blueEmitter= this[_0xa687[21]][_0xa687[46]](0,0,100),blueEmitter[_0xa687[48]](_0xa687[55]),_0x7566x20= this[_0xa687[21]][_0xa687[31]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2),_0x7566x20[_0xa687[31]]= _0xa687[56],_0x7566x20[_0xa687[25]][_0xa687[24]](0.5),_0x7566x20[_0xa687[33]]= _0xa687[34],_0x7566x20[_0xa687[35]]= 30,_0x7566x20[_0xa687[36]]= _0xa687[57],_0x7566x20[_0xa687[58]]= 0},update:function(){this[_0xa687[15]][_0xa687[18]][_0xa687[60]](_0x7566x7,_0x7566x6,this[_0xa687[59]],null,this),this[_0xa687[15]][_0xa687[18]][_0xa687[60]](_0x7566x6,coins,this[_0xa687[61]]),_0x7566x4[_0xa687[63]][_0xa687[62]]-= 2,(!0== _0x7566x1c && !0=== this[_0xa687[4]][_0xa687[66]][_0xa687[65]][_0xa687[64]] && this[_0xa687[4]][_0xa687[66]][_0xa687[65]][_0xa687[16]]> this[_0xa687[28]][_0xa687[29]]/ 2&& this[_0xa687[4]][_0xa687[66]][_0xa687[65]][_0xa687[16]]< 3* (this[_0xa687[28]][_0xa687[29]]/ 4) || !0=== this[_0xa687[66]][_0xa687[68]][_0xa687[67]][_0xa687[64]]) && (_0x7566x1c=  !1),!1== _0x7566x1c && !1== _0x7566x1f?(_0x7566xe[_0xa687[69]]=  !1,_0x7566xd[_0xa687[69]]=  !0,coinAmountLabel[_0xa687[69]]=  !0,smallCoinIcon[_0xa687[69]]=  !0,this[_0xa687[70]](_0x7566x6),this[_0xa687[71]](),this[_0xa687[72]](),this[_0xa687[73]](_0x7566x7),this[_0xa687[74]](),this[_0xa687[75]](_0x7566xc)):(_0x7566xe[_0xa687[69]]=  !0,_0x7566xd[_0xa687[69]]=  !1,coinAmountLabel[_0xa687[69]]=  !1,smallCoinIcon[_0xa687[69]]=  !1)},render:function(){},enemiesMove:function(_0x7566x22){_0x7566x22[_0xa687[16]]+= _0x7566xa,_0x7566x22[_0xa687[16]]>= this[_0xa687[28]][_0xa687[29]]&& (this[_0xa687[76]](_0x7566x22),_0x7566xb+= 1)},enemyPositions:function(_0x7566x22){_0x7566x22[_0xa687[78]][_0xa687[77]][_0xa687[16]]= _0x7566x10,_0x7566x22[_0xa687[16]]= 0- _0x7566x22[_0xa687[29]]/ 2,_0x7566x22[_0xa687[62]]= this[_0xa687[80]][_0xa687[79]](0+ _0x7566x22[_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[27]]- _0x7566x22[_0xa687[27]]/ 2);let _0x7566x23=this[_0xa687[80]][_0xa687[79]](0,640);9<= _0x7566xb&& (_0x7566x10+= 10),_0x7566x22[_0xa687[62]]= _0x7566x22[_0xa687[62]]<= this[_0xa687[28]][_0xa687[27]]/ 2?_0x7566x23:_0x7566x23},playerMove:function(_0x7566x22){this[_0xa687[66]][_0xa687[82]][_0xa687[64]](Phaser[_0xa687[81]].LEFT)?(_0x7566x22[_0xa687[3]][_0xa687[62]]=  -0.3,_0x7566x6[_0xa687[85]][_0xa687[84]](_0xa687[83],8,!0),_0x7566x22[_0xa687[62]]-= 10):this[_0xa687[66]][_0xa687[82]][_0xa687[64]](Phaser[_0xa687[81]].RIGHT)&& (_0x7566x22[_0xa687[3]][_0xa687[62]]= 0.3,_0x7566x6[_0xa687[85]][_0xa687[84]](_0xa687[83],8,!0),_0x7566x22[_0xa687[62]]+= 10),this[_0xa687[66]][_0xa687[65]][_0xa687[64]]?this[_0xa687[66]][_0xa687[65]][_0xa687[62]]> this[_0xa687[28]][_0xa687[27]]/ 2?(_0x7566x22[_0xa687[3]][_0xa687[62]]= 0.3,_0x7566x6[_0xa687[85]][_0xa687[84]](_0xa687[83],8,!0),_0x7566x22[_0xa687[62]]+= 10):(_0x7566x22[_0xa687[3]][_0xa687[62]]=  -0.3,_0x7566x6[_0xa687[85]][_0xa687[84]](_0xa687[83],8,!0),_0x7566x22[_0xa687[62]]-= 10):_0x7566x22[_0xa687[78]][_0xa687[77]][_0xa687[24]](0,0)},distanceTraveled:function(){_0x7566x13+= 1;var _0x7566x22=this[_0xa687[21]][_0xa687[86]](this);_0x7566x22[_0xa687[89]]({distanceParsecOld:_0x7566x13},1e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,500),_0x7566x22[_0xa687[93]](function(){_0x7566xd[_0xa687[92]](_0xa687[90]+ Math[_0xa687[91]](_0x7566x13))},this),_0x7566x12= _0x7566x13},coinLabelTextFun:function(_0x7566x22){coinAmountLabel[_0xa687[31]]= _0x7566x22},collisionHandler:function(){whiteEmitter[_0xa687[62]]= _0x7566x6[_0xa687[62]],whiteEmitter[_0xa687[16]]= _0x7566x6[_0xa687[16]],redEmitter[_0xa687[62]]= _0x7566x6[_0xa687[62]],redEmitter[_0xa687[16]]= _0x7566x6[_0xa687[16]],this[_0xa687[95]][_0xa687[94]](0.025,100),whiteEmitter[_0xa687[10]](!0,400,null,30),redEmitter[_0xa687[10]](!0,400,null,10),_0x7566x6[_0xa687[96]](),this[_0xa687[97]](_0x7566x7),_0x7566x1c=  !0,this[_0xa687[98]]()},createEnemy:function(){!1== _0x7566x1d && (_0x7566xc= 0,_0x7566x7= this[_0xa687[21]][_0xa687[23]](0,-400,_0xa687[99]),this[_0xa687[15]][_0xa687[18]][_0xa687[100]](_0x7566x7),_0x7566x7[_0xa687[101]]=  !0,_0x7566x7[_0xa687[78]][_0xa687[102]]=  !0,_0x7566x7[_0xa687[3]][_0xa687[24]](0.1),_0x7566x1d=  !0)},destroyEnemy:function(_0x7566x22){!0== _0x7566x1c && !0== _0x7566x1d && (_0x7566x22[_0xa687[96]](),_0x7566x1d=  !1)},spawnCoin:function(){if(!1== _0x7566x1c){let _0x7566x22=this[_0xa687[80]][_0xa687[79]](0,1),_0x7566x23=this[_0xa687[80]][_0xa687[79]](0,480),_0x7566x24=this[_0xa687[80]][_0xa687[79]](0,2);0=== _0x7566x24?_0x7566xf= this[_0xa687[21]][_0xa687[23]](_0x7566x23,-100,_0xa687[103],0):1=== _0x7566x24?_0x7566xf= this[_0xa687[21]][_0xa687[23]](_0x7566x23,-100,_0xa687[104],0):2=== _0x7566x24&& (_0x7566xf= this[_0xa687[21]][_0xa687[23]](_0x7566x23,-100,_0xa687[105],0)),this[_0xa687[15]][_0xa687[18]][_0xa687[100]](_0x7566xf),_0x7566xf[_0xa687[101]]=  !0,_0x7566xf[_0xa687[3]][_0xa687[24]](0.2),_0x7566xf[_0xa687[25]][_0xa687[24]](0.5),rotating= _0x7566xf[_0xa687[85]][_0xa687[21]](_0xa687[106]),_0x7566xf[_0xa687[85]][_0xa687[84]](_0xa687[106],10,!0),_0x7566xf[_0xa687[78]][_0xa687[17]][_0xa687[16]]= _0x7566x9,coins[_0xa687[21]](_0x7566xf)}},startSpawning:function(){this[_0xa687[80]][_0xa687[79]](1,100);this[_0xa687[107]](this)},destroyCoins:function(){coins[_0xa687[108]](function(_0x7566x22){_0x7566x22[_0xa687[16]]>= this[_0xa687[28]][_0xa687[29]]&& _0x7566x22[_0xa687[96]]()},this)},coinCollisionHandler:function(_0x7566x22,_0x7566x23){_0x7566x19[_0xa687[84]](_0xa687[109],0,1,!1),emitter[_0xa687[62]]= _0x7566x23[_0xa687[62]],emitter[_0xa687[16]]= _0x7566x23[_0xa687[16]],_0x7566x23[_0xa687[96]](),emitter[_0xa687[10]](!0,400,null,30);_0x7566xc+= 1},gameOverScreen:function(){_0x7566x1f=  !0,_0x7566x8= this[_0xa687[21]][_0xa687[23]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2,_0xa687[110]),_0x7566x8[_0xa687[25]][_0xa687[24]](0.5),_0x7566x8[_0xa687[58]]= 0;var _0x7566x22=this[_0xa687[21]][_0xa687[86]](_0x7566x8)[_0xa687[89]]({alpha:1},2e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,0);_0x7566x22[_0xa687[113]][_0xa687[112]](function(){this[_0xa687[111]]()},this)},resetFun:function(){_0x7566x12= 0,_0x7566x13= 0,_0x7566xc= 0,_0x7566x10= 300},highScoreFunc:function(){if(null=== localStorage[_0xa687[115]](_0xa687[114])?localStorage[_0xa687[116]](_0xa687[114],_0x7566x13):_0x7566x13> localStorage[_0xa687[115]](_0xa687[114])&& localStorage[_0xa687[116]](_0xa687[114],_0x7566x13),null=== localStorage[_0xa687[115]](_0xa687[117])){localStorage[_0xa687[116]](_0xa687[117],_0x7566xc)}else {if(null!= localStorage[_0xa687[115]](_0xa687[117])){var _0x7566x22=_0x7566xc+ localStorage[_0xa687[115]](_0xa687[117]);localStorage[_0xa687[116]](_0xa687[117],_0x7566x22)}};distanceEndGameLabel= this[_0xa687[21]][_0xa687[31]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2),distanceEndGameLabel[_0xa687[25]][_0xa687[24]](0.5),distanceEndGameLabel[_0xa687[33]]= _0xa687[34],distanceEndGameLabel[_0xa687[35]]= 30,distanceEndGameLabel[_0xa687[36]]= _0xa687[57],coinAmountGameOverScreenLabel= this[_0xa687[21]][_0xa687[31]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2+ 100),coinAmountGameOverScreenLabel[_0xa687[25]][_0xa687[24]](0.5),coinAmountGameOverScreenLabel[_0xa687[33]]= _0xa687[34],coinAmountGameOverScreenLabel[_0xa687[35]]= 20,coinAmountGameOverScreenLabel[_0xa687[36]]= _0xa687[57];var _0x7566x24=this[_0xa687[21]][_0xa687[86]](this);_0x7566x24[_0xa687[89]]({x:_0x7566x13},2e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,500),_0x7566x24[_0xa687[93]](function(){distanceEndGameLabel[_0xa687[92]](_0xa687[118]+ Math[_0xa687[91]](this[_0xa687[62]])+ _0xa687[119])},this),_0x7566x24[_0xa687[113]][_0xa687[112]](function(){blackEmitter[_0xa687[62]]= distanceEndGameLabel[_0xa687[62]],blackEmitter[_0xa687[16]]= distanceEndGameLabel[_0xa687[16]],this[_0xa687[95]][_0xa687[94]](0.025,200),blackEmitter[_0xa687[10]](!0,400,null,15);var _0x7566x25=this[_0xa687[21]][_0xa687[23]](this[_0xa687[28]][_0xa687[27]]/ 2- 200,this[_0xa687[28]][_0xa687[29]]/ 2+ 100,_0xa687[103]);_0x7566x25[_0xa687[3]][_0xa687[24]](0.3),_0x7566x25[_0xa687[25]][_0xa687[24]](0.5);var _0x7566x26=this[_0xa687[21]][_0xa687[86]](this);_0x7566x26[_0xa687[89]]({coin_amount:_0x7566xc},2e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,500),_0x7566x26[_0xa687[93]](function(){coinAmountGameOverScreenLabel[_0xa687[92]](_0xa687[120]+ Math[_0xa687[122]](this[_0xa687[121]])+ _0xa687[123])},this),_0x7566x26[_0xa687[113]][_0xa687[112]](function(){Math[_0xa687[122]](10<= this[_0xa687[121]])&& window[_0xa687[126]][_0xa687[125]](_0xa687[124]);var _0x7566x27=this[_0xa687[21]][_0xa687[31]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2+ 300);_0x7566x27[_0xa687[25]][_0xa687[24]](0.5),_0x7566x27[_0xa687[31]]= _0xa687[127],_0x7566x27[_0xa687[33]]= _0xa687[34],_0x7566x27[_0xa687[35]]= 45,_0x7566x27[_0xa687[36]]= _0xa687[57],_0x7566x27[_0xa687[96]](),_0x7566x25[_0xa687[96]](),coinAmountGameOverScreenLabel[_0xa687[96]](),distanceEndGameLabel[_0xa687[96]](),this[_0xa687[21]][_0xa687[86]](_0x7566x8)[_0xa687[89]]({alpha:0},2e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,0),this[_0xa687[26]](),this[_0xa687[128]](),_0x7566x1f=  !1},this)},this)},createNewPlayer:function(){_0x7566x6= this[_0xa687[21]][_0xa687[23]](160,310,_0xa687[129]),this[_0xa687[15]][_0xa687[18]][_0xa687[100]](_0x7566x6),_0x7566x6[_0xa687[101]]=  !0,_0x7566x6[_0xa687[78]][_0xa687[17]][_0xa687[16]]=  -this[_0xa687[15]][_0xa687[18]][_0xa687[17]][_0xa687[16]],_0x7566x6[_0xa687[78]][_0xa687[102]]=  !0,_0x7566x6[_0xa687[3]][_0xa687[24]](0.3),_0x7566x6[_0xa687[78]][_0xa687[130]]=  !0,_0x7566x6[_0xa687[25]][_0xa687[24]](0.5,0),flying= _0x7566x6[_0xa687[85]][_0xa687[21]](_0xa687[83])}},_0x7566x1[_0xa687[9]]= function(){},_0x7566x1[_0xa687[9]][_0xa687[1]]= {preload:function(){this[_0xa687[133]][_0xa687[132]](_0xa687[99],_0xa687[131]),this[_0xa687[133]][_0xa687[132]](_0xa687[19],_0xa687[134]),this[_0xa687[133]][_0xa687[132]](_0xa687[135],_0xa687[134]),this[_0xa687[133]][_0xa687[132]](_0xa687[136],_0xa687[137]),this[_0xa687[133]][_0xa687[132]](_0xa687[138],_0xa687[139]),this[_0xa687[133]][_0xa687[132]](_0xa687[140],_0xa687[141]),this[_0xa687[133]][_0xa687[132]](_0xa687[30],_0xa687[142]),this[_0xa687[133]][_0xa687[132]](_0xa687[22],_0xa687[143]),this[_0xa687[133]][_0xa687[132]](_0xa687[110],_0xa687[144]),this[_0xa687[133]][_0xa687[132]](_0xa687[47],_0xa687[145]),this[_0xa687[133]][_0xa687[132]](_0xa687[52],_0xa687[146]),this[_0xa687[133]][_0xa687[132]](_0xa687[53],_0xa687[147]),this[_0xa687[133]][_0xa687[132]](_0xa687[55],_0xa687[148]),this[_0xa687[133]][_0xa687[132]](_0xa687[54],_0xa687[149]),this[_0xa687[133]][_0xa687[132]](_0xa687[150],_0xa687[143]),this[_0xa687[133]][_0xa687[132]](_0xa687[151],_0xa687[152]),this[_0xa687[133]][_0xa687[132]](_0xa687[103],_0xa687[143]),this[_0xa687[133]][_0xa687[132]](_0xa687[104],_0xa687[153]),this[_0xa687[133]][_0xa687[132]](_0xa687[105],_0xa687[154]),this[_0xa687[133]][_0xa687[156]](_0xa687[129],_0xa687[155],225,420,3),this[_0xa687[133]][_0xa687[39]](_0xa687[157],_0xa687[158]),this[_0xa687[133]][_0xa687[39]](_0xa687[38],_0xa687[159])},create:function(){this[_0xa687[11]][_0xa687[10]](_0xa687[160])}};_0x7566x1[_0xa687[160]]= function(){},_0x7566x1[_0xa687[160]][_0xa687[1]]= {create:function(){this[_0xa687[162]][_0xa687[161]]= _0xa687[163],_0x7566x1a= this[_0xa687[21]][_0xa687[23]](this[_0xa687[28]][_0xa687[27]]/ 2,this[_0xa687[28]][_0xa687[29]]/ 2,_0xa687[136]),_0x7566x1a[_0xa687[25]][_0xa687[24]](0.5),_0x7566x1a[_0xa687[3]][_0xa687[24]](0.7),_0x7566x1a[_0xa687[58]]= 0,_0x7566x1b= this[_0xa687[21]][_0xa687[86]](_0x7566x1a)[_0xa687[89]]({alpha:1},2e3,Phaser[_0xa687[88]][_0xa687[87]].None,!0,0,1e3,!0),this[_0xa687[45]][_0xa687[44]][_0xa687[21]](4* Phaser[_0xa687[165]][_0xa687[164]],this[_0xa687[166]],this)},update:function(){},stopStart:function(){_0x7566x1b[_0xa687[40]](),this[_0xa687[167]]()},startGame:function(){this[_0xa687[11]][_0xa687[10]](_0xa687[12])}};var _0x7566x28= new Phaser.Game(640,480,Phaser.CANVAS,_0xa687[4]);_0x7566x28[_0xa687[11]][_0xa687[21]](_0xa687[0],_0x7566x1.Boot);_0x7566x28[_0xa687[11]][_0xa687[21]](_0xa687[9],_0x7566x1.Preload);_0x7566x28[_0xa687[11]][_0xa687[21]](_0xa687[160],_0x7566x1.SplashScene);_0x7566x28[_0xa687[11]][_0xa687[21]](_0xa687[12],_0x7566x1.Game);_0x7566x28[_0xa687[11]][_0xa687[10]](_0xa687[0])})()
+            </script>
+        </div>
     </div>
+    <div class="game-footer-desktop" class="col-lg-12">
 
-    </div>
+            <div class="social">
+                <p class="atl" style="text-align: center; color: white;">Made in Atlanta</p>
+                <a href="http://instagram.com/ogdanmurray">ig: @ogdanmurray</a><br>
+                <a href="http://instagram.com/halfp_st">ig: @halfp_st</a>
+            </div>
+        </div>
+    <footer>
+        <div class="game-footer" class="col-lg-12">
+            <div class="social">
+                <p class="atl" style="text-align: center; color: white;">Made in Atlanta</p>
+                <a href="http://instagram.com/ogdanmurray">ig: @ogdanmurray</a><br>
+                <a href="http://instagram.com/halfp_st">ig: @halfp_st</a>
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 

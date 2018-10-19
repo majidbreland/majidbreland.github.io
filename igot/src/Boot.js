@@ -31,7 +31,7 @@ var upX;
 var sound;//soundOn, soundOff sprite
 var soundBuffor = 0;
 var music;
-var coinPicking;
+var coinSound;
 //splashScene
 var splashImage1;
 var tween;
