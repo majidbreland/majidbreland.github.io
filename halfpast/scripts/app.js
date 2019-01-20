@@ -51,6 +51,8 @@ angular
             })
             .when('/motiongraphics', {
                 templateUrl: 'views/motiongraphics.html',
+                controller: 'MotiongraphicsCtrl',
+                controllerAs: 'motiongraphics'
             })
             .when('/press', {
                 templateUrl: 'views/press.html',
