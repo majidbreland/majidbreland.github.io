@@ -49,6 +49,9 @@ angular
                 controller: 'GraphicsCtrl',
                 controllerAs: 'graphics'
             })
+            .when('/motiongraphics', {
+                templateUrl: 'views/motiongraphics.html',
+            })
             .when('/press', {
                 templateUrl: 'views/press.html',
                 controller: 'PressCtrl',
